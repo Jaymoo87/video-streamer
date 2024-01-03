@@ -1,6 +1,11 @@
 import React from "react";
 import { Wrapper } from "./wrapper";
+import { Toggle } from "./toggle";
 
 export const SideBar = () => {
-  return <Wrapper>SideBar</Wrapper>;
+  return (
+    <Wrapper>
+      <Toggle />
+    </Wrapper>
+  );
 };
