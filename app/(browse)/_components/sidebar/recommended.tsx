@@ -3,7 +3,7 @@ import React from "react";
 
 import { useSideBar } from "@/store/useSideBar";
 import { User } from "@prisma/client";
-import { UserItem } from "./useritem";
+import { UserItem, UserItemSkeleton } from "./useritem";
 
 interface RecommendedProps {
   data: User[];
@@ -27,5 +27,15 @@ export const Recommended = ({ data }: RecommendedProps) => {
         ))}
       </ul>
     </div>
+  );
+};
+
+export const RecommendedSkeleton = () => {
+  return (
+    <ul className="px-2">
+      {[...Array(3)].map((_, i) => (
+        <UserItemSkeleton key={i} />
+      ))}
+    </ul>
   );
 };
