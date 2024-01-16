@@ -21,7 +21,7 @@ export const KeyCard = ({ value }: KeyCardProps) => {
             <Input value={value || ""} type={show ? "text" : "password"} disabled placeholder="Stream Key" />
             <CopyButton value={value || ""} />
           </div>
-          <Button onClick={() => setShow(!value)} size={"sm"} variant={"link"}>
+          <Button onClick={() => setShow(!show)} size={"sm"} variant={"link"}>
             {show ? "Hide" : "Show"}
           </Button>
         </div>
