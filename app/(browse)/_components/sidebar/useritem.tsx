@@ -34,7 +34,7 @@ export const UserItem = ({ username, imageUrl, isLive }: UserItemProps) => {
         <div className={cn("flex items-center w-full gap-x-4", collapsed && "justify-center")}>
           <UserAvatar showBadge imageUrl={imageUrl} username={username} isLive={true} />
           {!collapsed && <p className="truncate">{username}</p>}
-          {!collapsed && isLive && <LiveBadge className="ml-auto" />}
+          {!collapsed && isLive && <LiveBadge className="h-4 w-4" />}
         </div>
       </Link>
     </Button>

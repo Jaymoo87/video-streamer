@@ -2,13 +2,13 @@
 
 import React from "react";
 
-import { Follow, Stream, User } from "@prisma/client";
+import { Follow, User } from "@prisma/client";
 
 import { useSideBar } from "@/store/useSideBar";
 import { UserItem, UserItemSkeleton } from "./useritem";
 
 interface FollowingProps {
-  data: (Follow & { following: User & { stream: Stream | null } })[];
+  data: (Follow & { following: User & { stream: { isLive: boolean } | null } })[];
 }
 
 export const Following = ({ data }: FollowingProps) => {
