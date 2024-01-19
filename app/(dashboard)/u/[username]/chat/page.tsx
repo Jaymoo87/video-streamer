@@ -19,7 +19,7 @@ const ChatPage = async () => {
       <div className="space-y-4">
         <ToggleCard field="isChatEnabled" label="Enable Chat" value={stream.isChatEnabled} />
         <ToggleCard field="isChatDelayed" label="Delay Chat" value={stream.isChatDelayed} />
-        <ToggleCard field="isChatFollowersOnly" label="Folowers Only" value={stream.isChatFollowersOnly} />
+        <ToggleCard field="isChatFollowersOnly" label="Followers Only" value={stream.isChatFollowersOnly} />
       </div>
     </div>
   );

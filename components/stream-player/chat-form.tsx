@@ -18,6 +18,7 @@ interface ChatFormProps {
 }
 
 import React from "react";
+import { ChatInfo } from "./chat-info";
 
 export const ChatForm = ({
   onChange,
@@ -57,6 +58,7 @@ export const ChatForm = ({
   return (
     <form onSubmit={handleSubmit} className="flex flex-col items-center gap-y-4 p-3">
       <div className="w-full">
+        <ChatInfo isDelayed={isDelayed} isFollowersOnly={isFollowersOnly} />
         <Input
           onChange={(e) => onChange(e.target.value)}
           disabled={isDisabled}
