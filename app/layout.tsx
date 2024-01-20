@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <ClerkProvider appearance={{ baseTheme: dark }}>
-      <html lang="en">
+      <html suppressHydrationWarning lang="en">
         <body className={inter.className}>
           <ThemeProvider attribute="class" forcedTheme="dark" storageKey="ghosty-theme">
             <Toaster theme="light" position="bottom-center" />
