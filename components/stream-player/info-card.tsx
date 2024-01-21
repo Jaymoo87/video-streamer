@@ -31,7 +31,7 @@ export const InfoCard = ({ name, thumbnailUrl, hostIdentity, viewerIdentity }: I
             <h2 className="text-sm lg:text-lg font-semibold capitalize">Edit Your Stream Info Here</h2>
             <p className="text-muted-foreground text-xs lg:text-sm">Maximize your views</p>
           </div>
-          <InfoModal initialName={name} initialThumbnail={thumbnailUrl} />
+          <InfoModal initialName={name} initialThumbnailUrl={thumbnailUrl} />
         </div>
         <Separator />
         <div className="p-4 lg:p-4 space-y-4">
@@ -46,7 +46,7 @@ export const InfoCard = ({ name, thumbnailUrl, hostIdentity, viewerIdentity }: I
           </div>
           {thumbnailUrl && (
             <div className="relative aspect-video rounded-md overflow-hidden w-[200px] border border-white/10">
-              <Image fill src={thumbnailUrl} alt={name} />
+              <Image fill src={thumbnailUrl} alt={name} className="object-cover" />
             </div>
           )}
         </div>
