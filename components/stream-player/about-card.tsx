@@ -19,7 +19,7 @@ export const AboutCard = ({ hostName, hostIdentity, viewerIdentity, bio, followe
   const followedByLabel = followedByCount === 1 ? "follower" : "followers";
 
   return (
-    <div className="group rounded-xl bg-background p-6 lg:p-10 flex flex-col gap-y-3">
+    <div className="group rounded-xl bg-background p-6 lg:p-10 mx-0 lg:mx-4 flex flex-col gap-y-3">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-x-2 font-semibold text-lg lg:text-2xl">
           About {hostName}

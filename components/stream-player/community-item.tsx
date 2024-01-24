@@ -23,7 +23,7 @@ export const CommunityItem = ({ hostName, viewerName, participantIdentity, parti
   const [isPending, startTransition] = useTransition();
 
   const handleBlock = () => {
-    if (!participantName || isSelf || isHost) return;
+    if (!participantName || isSelf || !isHost) return;
 
     startTransition(() => {
       onBlock(participantIdentity)
