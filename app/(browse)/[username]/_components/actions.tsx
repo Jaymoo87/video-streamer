@@ -19,14 +19,14 @@ export const Actions = ({ isFollowing, userId }: ActionsProps) => {
   const handleFollow = () => {
     startTransition(() => {
       onFollow(userId)
-        .then((data) => toast.success(`You are now following ${data.following.username}`))
+        .then((data) => toast.success(`You are now following ${data?.following.username}`))
         .catch(() => toast.error("Something went wrong"));
     });
   };
   const handleUnfollow = () => {
     startTransition(() => {
       onUnFollow(userId)
-        .then((data) => toast.success(`You are no longer following ${data.following.username}`))
+        .then((data) => toast.success(`You are no longer following ${data?.following.username}`))
         .catch(() => toast.error("Something went wrong"));
     });
   };
@@ -34,14 +34,14 @@ export const Actions = ({ isFollowing, userId }: ActionsProps) => {
   const handleBlock = () => {
     startTransition(() => {
       onBlock(userId)
-        .then((data) => toast.success(`You have blocked ${data.blocked.username}`))
+        .then((data) => toast.success(`You have blocked ${data?.blocked.username}`))
         .catch(() => toast.error("Something went wrong"));
     });
   };
   const handleUnblock = () => {
     startTransition(() => {
       unBlock(userId)
-        .then((data) => toast.success(`You have unblocked ${data.blocked.username}`))
+        .then((data) => toast.success(`You have unblocked ${data?.blocked.username}`))
         .catch(() => toast.error("Something went wrong"));
     });
   };
